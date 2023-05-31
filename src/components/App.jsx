@@ -15,6 +15,7 @@ export class App extends Component {
     filter: '',
   };
 
+  
   componentDidMount() {
     const contacts = localStorage.getItem('contacts');
     const parsedContacts = JSON.parse(contacts);
@@ -29,6 +30,7 @@ export class App extends Component {
       localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
     }
   }
+
 
   formSubmit = ({ name, number }) => {
     const contact = {
